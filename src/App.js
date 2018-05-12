@@ -5,8 +5,8 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <div>
-        <div>
+      <div className="App">
+        <div className="App-title">
           Clocky Countdown Challenge
         </div>
         <div>
