@@ -23,6 +23,7 @@ class App extends Component {
           <div className="App-title">
             Clocky Countdown Challenge to {this.state.deadline}
           </div>
+          <p>Coming soon...</p>
           <div>
             <div className="Clock-days">Days</div>
             <div className="Clock-hours">Hours</div>
