@@ -11,11 +11,18 @@ class App extends Component {
     var month = dt.getMonth()+1;
     var day = dt.getDate()+1;
     var year = dt.getFullYear();
-    var dateNow = month + '-' + day + '-' + year;
+    var dateNow = month + '/' + day + '/' + year;
     this.state = {
       deadline: dateNow,
     };
   }
+
+  changeDeadline() {
+    this.setState({
+      deadline: "5/14/2018",
+    });
+  }
+
   render() {
     return (
       <div className="All">
@@ -33,7 +40,10 @@ class App extends Component {
           <div className="box">
             <div className="App-input">
               <input id="new" type="text" placeholder="New date"/>
-              <button class="icon"><i class="fa fa-calendar"></i></button>
+              {/*--ES6 Anonymous function for no loops that could crash the app*/}
+              <button class="icon" onClick={() => this.changeDeadline()}>
+                <i class="fa fa-calendar"></i>
+              </button>
             </div>
           </div>
         </div>
