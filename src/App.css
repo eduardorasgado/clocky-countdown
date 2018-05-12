@@ -1,10 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Montserrat');
 
+.All {
+  background-image: url("img/space.jpg");
+  background-size: 100%;
+  margin: 0;
+  padding: 0;
+
+}
+
 .App {
   font-family: 'Montserrat', sans-serif;
   text-align: center;
+  color: white;
   font-size: 35px;
-  margin-top: 15%;
+  padding-top: 15%;
+  padding-bottom: 15%;
+  background: rgb(0,0,0,0.5);
 }
 
 .App-title {
