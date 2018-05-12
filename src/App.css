@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Comfortaa|Montserrat');
 
+/*General for the component*/
 .All {
   background-image: url("img/space.jpg");
   -webkit-background-size: 100%;
@@ -11,6 +12,7 @@
 
 }
 
+/*General second layer*/
 .App {
   font-family: 'Montserrat', sans-serif;
   text-align: center;
@@ -21,14 +23,106 @@
   background: rgb(0,0,0,0.5);
 }
 
+/*title*/
 .App-title {
   font-size: 40px;
   font-family: 'Comfortaa', cursive;
   margin-bottom: 80px;
 }
 
+/*clock*/
 .Clock-days, .Clock-hours, .Clock-minutes, .Clock-seconds{
   display: inline;
   margin: 40px;
 
 }
+
+/*---------------New Date Input-----------------*/
+
+.box{
+  margin: 100px auto;
+  width: 300px;
+  height: 50px;
+}
+
+.App-input {
+  overflow: hidden;
+  width: 300px;
+  vertical-align: middle;
+  white-space: nowrap;
+ 
+
+}
+
+.App-input input#new{
+  width: 300px;
+  height: 50px;
+  background: #2b303b;
+  border: none;
+  font-size: 10pt;
+  float: left;
+  color: white;
+  padding-left: 15px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  /*Transition effects*/
+
+}
+
+/*needs to be added. Without it - form stretches, which makes 2nd example a wider rectangle*/
+input#new {box-sizing: border-box;}
+
+
+/*RULES FOR COLOR*/
+.App-input input#new::-webkit-input-placeholder {
+   color: #65737e;
+}
+ 
+.App-input input#new:-moz-placeholder { /* Firefox 18- */
+   color: #65737e;  
+}
+ 
+.App-input input#new::-moz-placeholder {  /* Firefox 19+ */
+   color: #65737e;  
+}
+ 
+.App-input input#new:-ms-input-placeholder {  
+   color: #65737e;  
+}
+
+/*Icon position and style*/
+.App-input .icon{
+
+  -webkit-border-top-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -moz-border-radius-bottomright: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+  border: none;
+  background: #232833;
+  height: 50px;
+  width: 50px;
+  color: #4f5b66;
+  opacity: 0;
+  font-size: 10pt;
+
+  -webkit-transition: all .55s ease;
+  -moz-transition: all .55s ease;
+  -ms-transition: all .55s ease;
+  -o-transition: all .55s ease;
+  transition: all .55s ease;
+}
+
+.App-input input#new:hover, .App-input input#new:focus, .App-input input#new:active{
+    outline:none;
+    opacity: 1;
+    margin-left: -50px;
+    background: #ffffff;
+  }
+
+  .App-input:hover button.icon:hover {
+    background-color: white;
+  }
