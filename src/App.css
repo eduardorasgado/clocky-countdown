@@ -50,8 +50,6 @@
   width: 300px;
   vertical-align: middle;
   white-space: nowrap;
- 
-
 }
 
 .App-input input#new{
@@ -66,12 +64,8 @@
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  /*Transition effects*/
-
+  
 }
-
-/*needs to be added. Without it - form stretches, which makes 2nd example a wider rectangle*/
-input#new {box-sizing: border-box;}
 
 
 /*RULES FOR COLOR*/
@@ -92,8 +86,7 @@ input#new {box-sizing: border-box;}
 }
 
 /*Icon position and style*/
-.App-input .icon{
-
+.App-input button.icon {
   -webkit-border-top-right-radius: 5px;
   -webkit-border-bottom-right-radius: 5px;
   -moz-border-radius-topright: 5px;
@@ -116,11 +109,12 @@ input#new {box-sizing: border-box;}
   transition: all .55s ease;
 }
 
-.App-input input#new:hover, .App-input input#new:focus, .App-input input#new:active{
+.App-input:hover button.icon, .App-input:active button.icon, .App-input:focus button.icon {
     outline:none;
     opacity: 1;
-    margin-left: -50px;
+    margin-left: -90px;
     background: #ffffff;
+    border-radius: 5px;
   }
 
   .App-input:hover button.icon:hover {

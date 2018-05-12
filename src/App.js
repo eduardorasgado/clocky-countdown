@@ -31,8 +31,8 @@ class App extends Component {
           </div>
           <div className="box">
             <div className="App-input">
-              <input id="new" type="text" placeholder="new date"/>
-              <button class="icon"><i class="fa fa-search"></i></button>
+              <input id="new" type="text" placeholder="New date"/>
+              <button class="icon"><i class="fa fa-calendar"></i></button>
             </div>
           </div>
         </div>
