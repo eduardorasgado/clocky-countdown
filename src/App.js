@@ -11,10 +11,10 @@ class App extends Component {
             Clocky Countdown Challenge
           </div>
           <div>
-            <div>Days</div>
-            <div>Hours</div>
-            <div>Minutes</div>
-            <div>Seconds</div>
+            <div className="Clock-days">Days</div>
+            <div className="Clock-hours">Hours</div>
+            <div className="Clock-minutes">Minutes</div>
+            <div className="Clock-seconds">Seconds</div>
           </div>
           <div>
             <input placeholder="new date"/>
