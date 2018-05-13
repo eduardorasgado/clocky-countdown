@@ -14,7 +14,9 @@ class App extends Component {
     var month = dt.getMonth()+1;
     var day = dt.getDate()+1;
     var year = dt.getFullYear();
-    var dateNow = month + '/' + day + '/' + year;
+    var months = ['January', 'February','March', 'Aplil', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+    var dateNow = months[month-1] + '/' + day + '/' + year + '/0:00:00';
     this.state = {
       deadline: dateNow,
       newDeadline: ''
@@ -34,12 +36,14 @@ class App extends Component {
       <div className="All">
         <div className="App">
           <div className="App-title">
-            Clocky Countdown Challenge to {this.state.deadline}
+            Clocky Countdown Challenge to<br/>{this.state.deadline}
           </div>
           <p>Coming soon...</p>
           
           {/*CLOCK COMPONENT*/}
-          <Clock />
+          <Clock
+            deadline = {this.state.deadline}
+           />
 
           <div className="box">
             <div className="App-input">
