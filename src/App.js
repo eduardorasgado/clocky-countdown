@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+/*Importing Styles*/
 import './App.css';
+/*Importing the clock*/
+import Clock from './Clock';
+
 
 class App extends Component {
   constructor(props){
@@ -14,12 +17,15 @@ class App extends Component {
     var dateNow = month + '/' + day + '/' + year;
     this.state = {
       deadline: dateNow,
+      newDeadline: ''
     };
   }
 
   changeDeadline() {
+    /*console.log('state', this.state)*/
+    /*Set new deadline to old deadline*/
     this.setState({
-      deadline: "5/14/2018",
+      deadline: this.state.newDeadline,
     });
   }
 
@@ -31,18 +37,19 @@ class App extends Component {
             Clocky Countdown Challenge to {this.state.deadline}
           </div>
           <p>Coming soon...</p>
-          <div>
-            <div className="Clock-days">Days</div>
-            <div className="Clock-hours">Hours</div>
-            <div className="Clock-minutes">Minutes</div>
-            <div className="Clock-seconds">Seconds</div>
-          </div>
+          
+          {/*CLOCK COMPONENT*/}
+          <Clock />
+
           <div className="box">
             <div className="App-input">
-              <input id="new" type="text" placeholder="New date"/>
+
+              <input id="new" type="text" placeholder="New date" 
+              onChange={event => this.setState({newDeadline: event.target.value})}/>
+              
               {/*--ES6 Anonymous function for no loops that could crash the app*/}
-              <button class="icon" onClick={() => this.changeDeadline()}>
-                <i class="fa fa-calendar"></i>
+              <button className="icon" onClick={() => this.changeDeadline()}>
+                <i className="fa fa-calendar"></i>
               </button>
             </div>
           </div>

@@ -19,8 +19,12 @@
   color: white;
   font-size: 35px;
   padding-top: 10%;
-  padding-bottom: 22vh;
+  padding-bottom: 2%;
   background: rgb(0,0,0,0.5);
+}
+
+.App p {
+  font-size: 20px;
 }
 
 /*title*/
@@ -32,14 +36,18 @@
 
 /*clock*/
 .Clock-days, .Clock-hours, .Clock-minutes, .Clock-seconds{
-  display: inline;
+  display: inline-block;
   margin: 40px;
 
 }
 
-.App p {
-  font-size: 20px;
+.digit {
+  display: block;
 }
+.date-piece{
+  display: inline;
+}
+
 
 /*---------------New Date Input-----------------*/
 
@@ -106,6 +114,7 @@
   color: #4f5b66;
   opacity: 0;
   font-size: 10pt;
+  cursor: pointer;
 
   -webkit-transition: all .55s ease;
   -moz-transition: all .55s ease;
